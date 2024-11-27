@@ -1,0 +1,40 @@
+classDiagram
+    Item <|-- Spellthread
+    Item <|-- Harmonious
+    Item <|-- Bolt
+    Item <|-- Phial
+    Item : +int SellPrice
+    Item : +double SellRate
+    Item : +double CraftingCost
+    Item: +bool inStock()
+    Item: +Quality()
+    Item: +bool Stackable()
+    class Spellthread{
+      +String prefix
+      +int Intellect
+      +int Mana
+      +bool consumable()
+    }
+    class Harmonious{
+      +int Mycobloom
+      +int Orbinid
+      +int Blossom
+      +int Luredrop
+      +int Arathor
+      +int stacksize
+    }
+    class Bolt{
+      +String prefix
+      +int Thread
+      +int Cloth
+      -intermediate()
+      -convert()
+    }
+    class Phial{
+      +int Orbinid
+      +int Blossom
+      +int Luredrop
+      +int Arathor
+      +int stacksize
+      -duration()
+    }
